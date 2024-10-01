@@ -1,0 +1,16 @@
+﻿@* IEnumerable<CityWeather> *@
+@{
+    ViewBag.Title = "Weather";
+}
+<div class="page-content">
+    <h2>Weather Detail</h2>
+    <div class="flex">
+        @foreach(CityWeather city in Model)
+        { 
+                <partial name="_WeatherPartialView" model="city"></partial>
+            
+        }
+       
+
+    </div>
+</div>

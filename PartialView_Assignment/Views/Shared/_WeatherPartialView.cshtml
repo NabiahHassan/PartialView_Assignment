@@ -1,0 +1,27 @@
+﻿@model CityWeather
+
+@{
+    string FahrenheitCSS(int TemperatureFahrenheit)
+    {
+        return TemperatureFahrenheit switch
+        {
+            (< 44) => "blue-back",
+            (>= 44) and (< 75) => "green-back",
+            (>= 75) => "orange-back"
+        };
+    }
+}
+            <div class="w-30 box flex @FahrenheitCSS(Model.TemperatureFahrenheit)">
+                <div class="flex-borderless w-100">
+                    <div class="w-50">
+                        <p>@Model.CityName</p>
+                        <p>@Model.DateAndTime.ToString("hh:mm tt")</p>
+                        <a href="~/weather/@Model.CityUniqueCode">Detail</a>
+                    </div>
+                    <div class="w-50 border-left">
+                        <p>@Model.TemperatureFahrenheit</p>
+                    </div>
+                </div>
+
+            </div>
+        

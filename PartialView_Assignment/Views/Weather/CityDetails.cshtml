@@ -1,0 +1,21 @@
+﻿ <div class="page-content">
+     <h2>Weather Detail</h2>
+     <div class="w-50">
+         <h2>@Model.CityName</h2>
+         <div class=" box flex">
+             <div class="flex-borderless w-100">
+                 <div class="w-50">
+                     <p>@Model.CityName</p>
+                     <p>@Model.DateAndTime.ToString("ddd/MMM/yyyy")</p>
+                     <p>@Model.DateAndTime.ToString("hh:mm tt")</p>
+                 </div>
+                 <div class="w-50 border-left">
+                     <p>@Model.TemperatureFahrenheit</p>
+                 </div>
+             </div>
+
+         </div>
+         <a href="/">Home</a>
+     </div>
+ </div>
+ 
